@@ -10,8 +10,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install numpy==2.2.5
-RUN pip install git+https://github.com/numba/numba.git@main
 # Copy app code and models
 COPY . .
 
